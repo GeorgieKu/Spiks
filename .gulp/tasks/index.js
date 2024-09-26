@@ -1,0 +1,15 @@
+export { default as clearPublic } from './clear-public.js';
+export { default as deploy } from './deploy.js';
+export { default as prettifyTemplates } from './prettify-templates.js';
+export { default as compileTemplates } from './compile-templates.js';
+export { default as compileScripts } from './compile-scripts.js';
+export { default as compileStyles } from './compile-styles.js';
+export { default as copyFonts } from './copy-fonts.js';
+export { default as copyImages } from './copy-images.js';
+export { default as convertFonts } from './convert-fonts.js';
+export { default as copySvgSprites } from './copy-svg-sprites.js';
+export { default as copyOtherAssets } from './copy-other-assets.js';
+export { default as buildSvgSprites } from './build-svg-sprites.js';
+export { default as buildCleanSvgSprites } from './build-clean-svg-sprites.js';
+export { default as runBrowserSync, browserSyncInstance } from './create-browser-sync.js';
+export { default as normalizeStructure } from './normalize-structure.js';

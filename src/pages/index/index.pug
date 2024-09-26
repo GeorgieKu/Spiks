@@ -1,0 +1,326 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Marketplace")
+    link(rel="stylesheet", href="./assets/other/nouislider.min.css")
+    link(rel="stylesheet", href="css/index.css")
+    title Marketplace 
+    header.header
+      .container 
+        .header__flex 
+          a.header__link(href="./index.html") Marketplace 
+          .header__relative 
+            input(
+            class='header__input'
+            type='text'
+            name='search'
+            placeholder='Search for a product, flower, etc'
+          )
+            i.header__icon 
+          .header__checkboxes
+            label.header__checkbox.header__checkbox_active
+              input(
+                type='checkbox'
+                name='header-check'
+                class='visually-hidden'
+                checked
+              ) 
+              span.header__checkbox-text Buds
+            label.header__checkbox
+              input(
+                type='checkbox'
+                name='header-check'
+                class='visually-hidden'
+              ) 
+              span.header__checkbox-text Edible
+            label.header__checkbox
+              input(
+                type='checkbox'
+                name='header-check'
+                class='visually-hidden'
+              ) 
+              span.header__checkbox-text Non Edible
+            label.header__checkbox
+              input(
+                type='checkbox'
+                name='header-check'
+                class='visually-hidden'
+              ) 
+              span.header__checkbox-text Concentrate
+        .header__flex-2 
+          .header__tools
+            .header__slider-block 
+              span.header__text Price Range
+              #header-slider-1.header__slider
+              .header__inputs
+                label.visually-hidden(for="slider-1-input-1") First price range amount
+                input(type='text'  class='header__input-2' id='slider-1-input-1')
+                label.visually-hidden(for="slider-1-input-2") Second price range amount
+                input(type='text' class='header__input-2' id='slider-1-input-2')
+            .header__slider-block.header__slider-block-2
+              span.header__text ТНС, %
+              #header-slider-2.header__slider
+              .header__inputs
+                label.visually-hidden(for="slider-2-input-1") THC % amount
+                input(type='text' max='100' class='header__input-2' id='slider-2-input-1')
+            .header__slider-block.header__slider-block-3
+              span.header__text CBD, %
+              #header-slider-3.header__slider
+              .header__inputs
+                label.visually-hidden(for="slider-3-input-1") CBD % amount
+                input(type='text' class='header__input-2' id='slider-3-input-1')
+            .header__block
+              span.header__text.header__text_mb Nose
+              .header__rating
+                .header__rating-group
+                  label(for="fst")
+                  input(name="fst",id='fst' value="0", type="radio", disabled, checked)
+        
+                  label(for="fst-1") 
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="19", viewBox="0 0 4 19")
+                      rect(width="4", height="19")
+                  input(name="fst", id="fst-1", value="0.5", type="radio")
+                  
+                  label(for="fst-2")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="19", viewBox="0 0 4 19")
+                      rect(width="4", height="19")
+                  input(name="fst", id="fst-2", value="1", type="radio")
+                  
+                  label(for="fst-3")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="19", viewBox="0 0 4 19")
+                      rect(width="4", height="19")
+                  input(name="fst", id="fst-3", value="1.5", type="radio")
+
+                  label(for="fst-4")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="19", viewBox="0 0 4 19")
+                      rect(width="4", height="19")
+                  input(name="fst", id="fst-4", value="2", type="radio")
+
+                  label(for="fst-5")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="26", viewBox="0 0 4 26")
+                      rect(width="4", height="26")
+                  input(name="fst", id="fst-5", value="2.5", type="radio")
+
+                  label(for="fst-6")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="19", viewBox="0 0 4 19")
+                      rect(width="4", height="19")
+                  input(name="fst", id="fst-6", value="3", type="radio")
+
+                  label(for="fst-7")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="19", viewBox="0 0 4 19")
+                      rect(width="4", height="19")
+                  input(name="fst", id="fst-7", value="3.5", type="radio")
+
+                  label(for="fst-8")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="19", viewBox="0 0 4 19")
+                      rect(width="4", height="19")
+                  input(name="fst", id="fst-8", value="4", type="radio")
+
+                  label(for="fst-9")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="19", viewBox="0 0 4 19")
+                      rect(width="4", height="19")
+                  input(name="fst", id="fst-9", value="4.5", type="radio")
+
+                  label(for="fst-10")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="4", height="26", viewBox="0 0 4 26")
+                      rect(width="4", height="26")
+                  input(name="fst", id="fst-10", value="5", type="radio")
+                .header__min-max 
+                  span min
+                  span max
+          button.header__filter#filterBtn(aria-label='Open sort list')
+            svg(width="24" height="24")
+              use(xlink:href="./assets/sprites/default/sprite.svg#filter")
+          ul.header__list
+            li.header__item Sort by&nbsp;:
+            li.header__item 
+              button.header__item-btn(aria-label="sort by ...") 
+                svg(width="24" height="24")
+                  use(xlink:href="assets/sprites/default/sprite.svg#Calendar")
+                span Date (New first)
+            li.header__item 
+              button.header__item-btn(aria-label="sort by ...")
+                svg(width="24" height="24")
+                  use(xlink:href="assets/sprites/default/sprite.svg#Calendar") 
+                span Date (New first)
+            li.header__item 
+              button.header__item-btn(aria-label="sort by ...") 
+                svg(width="24" height="24")
+                  use(xlink:href="assets/sprites/default/sprite.svg#Arrow")
+                span Price (High first)
+            li.header__item 
+              button.header__item-btn(aria-label="sort by ...") 
+                svg(width="24" height="24")
+                  use(xlink:href="assets/sprites/default/sprite.svg#Arrow-down")
+                span Price (Low first)
+            li.header__item 
+              button.header__item-btn(aria-label="sort by ...") 
+                svg(width="26" height="17")
+                  use(xlink:href="assets/sprites/default/sprite.svg#thc1")
+                span Total THC (High first)
+            li.header__item 
+              button.header__item-btn(aria-label="sort by ...") 
+                svg(width="26" height="17")
+                  use(xlink:href="assets/sprites/default/sprite.svg#thc2")
+                span Total THC (Low first)
+            li.header__item 
+              button.header__item-btn(aria-label="sort by ...") 
+                svg(width="26" height="17")
+                  use(xlink:href="assets/sprites/default/sprite.svg#cbd")
+                span Total CBD (High first)
+            li.header__item 
+              button.header__item-btn(aria-label="sort by ...") 
+                svg(width="26" height="17")
+                  use(xlink:href="assets/sprites/default/sprite.svg#cbd2")
+                span Total CBD (Low first)
+        .header__results 
+          span.header__text-2 1034,5 Results
+          ul.header__list-2
+    main 
+      section.hero 
+        .container 
+          h1.visually-hidden title 
+          .hero__accardeons
+            .hero__bg 
+              h2.hero__accardeon.acc Classification  
+                svg(width="13" height="12")
+                  use(xlink:href="assets/sprites/default/sprite.svg#acc-arrow")   
+              .acc__content.open
+                .acc__text-wrapper
+                  ul.acc__list 
+                    li.acc__item 
+                      .acc__custom-checkbox.acc__custom-checkbox_active
+                        label.visually-hidden(for="checkbox1") chose 100% Indica
+                        input(type='checkbox' id='checkbox1' checked class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text 100% Indica
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox2") chose 100% Sativa
+                        input(type='checkbox' id='checkbox2' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text 100% Sativa
+                    li.acc__item 
+                      .acc__custom-checkbox.acc__custom-checkbox_active 
+                        label.visually-hidden(for="checkbox3") chose >50% Indica
+                        input(type='checkbox' id='checkbox3' checked class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text >50% Indica
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox4") chose >50% Sativa
+                        input(type='checkbox' id='checkbox4' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text >50% Sativa
+              h2.hero__accardeon.acc Production Method  
+                svg(width="13" height="12")
+                  use(xlink:href="assets/sprites/default/sprite.svg#acc-arrow")  
+              .acc__content.open
+                .acc__text-wrapper
+                  ul.acc__list 
+                    li.acc__item 
+                      .acc__custom-checkbox.acc__custom-checkbox_active
+                        label.visually-hidden(for="checkbox5") chose Indoor
+                        input(type='checkbox' id='checkbox5' checked class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Indoor
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox6") chose Outdoor
+                        input(type='checkbox' id='checkbox6' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Outdoor
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox7") chose Greenhouse
+                        input(type='checkbox' id='checkbox7' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Greenhouse
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox8") chose Light Deprivation
+                        input(type='checkbox' id='checkbox8'  class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Light Deprivation
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox9") chose Mixed Light
+                        input(type='checkbox' id='checkbox9' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Mixed Light
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox10") chose Other
+                        input(type='checkbox' id='checkbox10' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Other
+              h2.hero__accardeon.acc Size  
+                svg(width="13" height="12")
+                  use(xlink:href="assets/sprites/default/sprite.svg#acc-arrow")   
+              .acc__content.open
+                .acc__text-wrapper
+                  ul.acc__list 
+                    li.acc__item 
+                      .acc__custom-checkbox.acc__custom-checkbox_active
+                        label.visually-hidden(for="checkbox11") chose Flower
+                        input(type='checkbox' id='checkbox11' checked class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Flower
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox12") chose Pre-Roll Flower
+                        input(type='checkbox' id="checkbox12"  class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Pre-Roll Flower
+                    li.acc__item 
+                      .acc__custom-checkbox
+                        label.visually-hidden(for="checkbox13") chose Pre-Roll Infused
+                        input(type='checkbox' id="checkbox13" class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Pre-Roll Infused
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox14") chose Pre-Roll Leaf
+                        input(type='checkbox' id="checkbox14" class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Pre-Roll Leaf
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox15") chose Shake
+                        input(type='checkbox' id='checkbox15'  class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Shake
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox16") chose Smalls 
+                        input(type='checkbox' id='checkbox16' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Smalls  
+                    li.acc__item 
+                      .acc__custom-checkbox
+                        label.visually-hidden(for="checkbox17") chose Trim 
+                        input(type='checkbox' id='checkbox17' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Trim 
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox18") chose Shake
+                        input(type='checkbox' id='checkbox18' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Shake
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox19") chose Keef
+                        input(type='checkbox' id='checkbox19' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Keef
+                    li.acc__item 
+                      .acc__custom-checkbox 
+                        label.visually-hidden(for="checkbox20") chose Fresh Frozen
+                        input(type='checkbox' id='checkbox20' class='visually-hidden')
+                        span.acc__checkbox
+                        span.acc__text Fresh Frozen
+    script(src="js/index.js")

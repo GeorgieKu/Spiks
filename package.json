@@ -1,0 +1,101 @@
+{
+  "name": "html-template",
+  "description": "A template for creating a static front-end",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "exe:gulp": "cd .gulp && node ../node_modules/gulp/bin/gulp.js",
+    "exe:hygen": "cd .hygen && node ../node_modules/hygen/dist/bin.js",
+    "start": "npm run exe:gulp && npm run exe:gulp watch",
+    "build": "cross-env NODE_ENV=production npm run exe:gulp",
+    "deploy": "npm run exe:gulp deploy",
+    "gen:block": "npm run exe:hygen new block",
+    "gen:layout": "npm run exe:hygen new layout",
+    "gen:page": "npm run exe:hygen new page",
+    "sb:start": "npx storybook dev -p 6006",
+    "sb:build": "npx storybook build",
+    "eslint:check": "npx eslint \"src/**/*.js\"",
+    "eslint:fix": "npx eslint --fix \"src/**/*.js\"",
+    "stylelint:check": "npx stylelint \"src/**/*.scss\"",
+    "stylelint:fix": "npx stylelint --fix \"src/**/*.scss\""
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/visetin/html-template"
+  },
+  "bugs": {
+    "url": "https://github.com/visetin/html-template/issues"
+  },
+  "homepage": "https://github.com/visetin/html-template#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@chromatic-com/storybook": "^1.3.5",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@storybook/addon-essentials": "^8.0.10",
+    "@storybook/addon-interactions": "^8.0.10",
+    "@storybook/addon-links": "^8.0.10",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
+    "@storybook/blocks": "^8.0.10",
+    "@storybook/html": "^8.0.10",
+    "@storybook/html-webpack5": "^8.0.10",
+    "@storybook/test": "^8.0.10",
+    "@webdiscus/pug-loader": "^2.11.0",
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^3.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.1",
+    "cssnano": "^7.0.1",
+    "del": "^7.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "gh-pages": "^6.1.1",
+    "gulp": "^5.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "hygen": "^6.2.11",
+    "npm-check-updates": "^16.14.20",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "rollup": "^4.17.2",
+    "sass": "^1.77.0",
+    "sass-loader": "^14.2.1",
+    "storybook": "^8.0.10",
+    "stylelint": "^16.5.0",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.3.0"
+  },
+  "dependencies": {
+    "@csstools/normalize.css": "^12.1.1",
+    "nouislider": "^15.8.1"
+  }
+}

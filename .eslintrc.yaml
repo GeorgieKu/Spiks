@@ -1,0 +1,37 @@
+env:
+  browser: true
+  node: true
+plugins:
+  - import
+  - no-loops
+extends:
+  - airbnb-base
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+settings:
+  import/resolver:
+    node: true
+rules:
+  quotes:
+    - error
+    - single
+    - avoidEscape: true
+  linebreak-style: 'off'
+  arrow-body-style:
+    - error
+    - always
+  no-console: warn
+  no-debugger: warn
+  no-unused-vars:
+    - error
+    - argsIgnorePattern: ^_
+  import/no-cycle: error
+  import/extensions: 'off'
+  import/no-extraneous-dependencies: 'off'
+  no-loops/no-loops: error
+overrides:
+  - files:
+      - index.js
+    rules:
+      import/prefer-default-export: 'off'

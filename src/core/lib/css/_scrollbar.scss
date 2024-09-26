@@ -1,0 +1,25 @@
+@mixin scrollbar(
+  $size: 10px,
+  $foreground-color: #999,
+  $background-color: #333,
+  $radius: 4px
+) {
+  scrollbar-color: $foreground-color $background-color;
+  scrollbar-width: thin;
+  -webkit-tap-highlight-color: transparent;
+
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $radius;
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: $radius;
+    background: $background-color;
+  }
+}
